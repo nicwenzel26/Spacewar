@@ -14,7 +14,8 @@ if(keyboard_check(ord("D"))) {
 }
 
 if(keyboard_check_pressed(vk_space)) {
-	instance_create_layer(x,y,"instances", objMissle)
+	instance_create_layer(x,y,"instances", objMainMissle)
+	
 }
 
 

@@ -14,7 +14,7 @@ if(keyboard_check(vk_right)) {
 }
 
 if(keyboard_check_pressed(vk_enter)) {
-	instance_create_layer(x,y,"instances", objMissle)
+	instance_create_layer(x,y,"instances", objSecondMissle)
 }
 
 
