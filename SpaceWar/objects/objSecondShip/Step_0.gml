@@ -13,9 +13,16 @@ if(keyboard_check(vk_right)) {
 	image_angle -= 5
 }
 
+//If the mag is not full put rounds in 
+if(roundsInMagazine < 5 && !reloading) {
+	reloading = true
+	alarm[1] = 4 * room_speed
+}
+
 //Fire a missle if the user presses enter and canFire is true
-if(keyboard_check_pressed(vk_enter) && canFire) {
+if(keyboard_check_pressed(vk_enter) && canFire && roundsInMagazine > 0) {
 	canFire = false
+	roundsInMagazine -= 1
 	instance_create_layer(x,y,"instances", objSecondMissle)
 	alarm[0] = 1 * room_speed
 }
