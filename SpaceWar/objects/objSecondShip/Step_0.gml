@@ -40,8 +40,11 @@ if(fuelLeft < 1000 && !accel) {
 if(keyboard_check(vk_up) && fuelLeft > 0) {
 	accel = true
 	xVelocity += deltaV*xDirection 
-	yVelocity -= deltaV*yDirection 
+	yVelocity -= deltaV*yDirection
 	fuelLeft -= 10
+	
+	if(fuelLeft < 0) fuelLeft = 0
+	
 	image_index = 1
 }
 

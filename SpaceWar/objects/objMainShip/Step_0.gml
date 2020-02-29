@@ -42,6 +42,7 @@ if(keyboard_check(ord("W")) && fuelLeft > 0) {
 	xVelocity += deltaV*xDirection 
 	yVelocity -= deltaV*yDirection 
 	fuelLeft -= 10
+	if(fuelLeft < 0) fuelLeft = 0
 	image_index = 1
 	
 	

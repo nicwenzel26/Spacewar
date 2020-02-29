@@ -14,5 +14,3 @@ yVelocity += velYGrav
 x += xVelocity
 y += yVelocity
 
-//Wraps around the screen
-move_wrap(true,true,sprite_width / 2)
