@@ -31,16 +31,24 @@ if(keyboard_check_pressed(vk_enter) && canFire && roundsInMagazineSecond > 0) {
 //Turning off the drive if not activly accel
 image_index = 0
 
-
+if(fuelLeft < 1000 && !accel) {
+	fuelLeft += 1
+}
 
 //Add add velocity to the space ship velocity constants
 //Also adds drive plume to the sprite 
-if(keyboard_check(vk_up)) {
+if(keyboard_check(vk_up) && fuelLeft > 0) {
+	accel = true
 	xVelocity += deltaV*xDirection 
 	yVelocity -= deltaV*yDirection 
-	
+	fuelLeft -= 10
 	image_index = 1
 }
+
+if(keyboard_check_released(vk_up) ) {
+	accel = false
+}
+
 
 
 distance = point_distance(x,y, objStar.x, objStar.y)

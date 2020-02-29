@@ -7,3 +7,6 @@ reloading = false
 roundsInMagazineMain = 5
 
 deltaV = 0.06
+
+fuelLeft = 1000
+accel = false

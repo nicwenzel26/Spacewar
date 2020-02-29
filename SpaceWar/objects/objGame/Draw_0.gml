@@ -59,7 +59,13 @@ ENTER: SHOOT
 		}
 
 		draw_text(20, 60, "LIVES: " + string(global.player1_lives))
-
+		
+		if(instance_exists(objMainShip)) {
+			draw_text(20, 80, "FUEL: " + string(objMainShip.fuelLeft))
+		}
+		else {
+			draw_text(20, 80, "FUEL: 0" )
+		}
 
 
 		draw_text(580,20, "P2 SCORE: " + string(global.player2_score))
@@ -73,5 +79,13 @@ ENTER: SHOOT
 		}
 
 		draw_text(580, 60, "LIVES: " + string(global.player2_lives))
+		
+		if(instance_exists(objSecondShip)) {
+			draw_text(580, 80, "FUEL: " + string(objSecondShip.fuelLeft))
+		}
+		else {
+			draw_text(580, 80, "FUEL: 0" )
+		}
+		
 		break
 }
