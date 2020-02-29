@@ -11,8 +11,8 @@ alarm[0] = 4 *room_speed
 alarm[1] = .25 * room_speed
 
 //Setting the inital velocity to be the current velocity of the ship
-xVelocity = objMainShip.xVelocity
-yVelocity = objMainShip.yVelocity
+xVelocity = objSecondShip.xVelocity
+yVelocity = objSecondShip.yVelocity
 
 //Giving a inital delta of 5
 deltaV = 5

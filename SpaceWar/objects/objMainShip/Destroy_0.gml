@@ -1,0 +1,1 @@
+global.player1_lives -= 1
