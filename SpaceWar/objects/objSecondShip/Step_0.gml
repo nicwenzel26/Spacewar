@@ -13,8 +13,11 @@ if(keyboard_check(vk_right)) {
 	image_angle -= 5
 }
 
-if(keyboard_check_pressed(vk_enter)) {
+//Fire a missle if the user presses enter and canFire is true
+if(keyboard_check_pressed(vk_enter) && canFire) {
+	canFire = false
 	instance_create_layer(x,y,"instances", objSecondMissle)
+	alarm[0] = 1 * room_speed
 }
 
 

@@ -13,9 +13,11 @@ if(keyboard_check(ord("D"))) {
 	image_angle -= 5
 }
 
-if(keyboard_check_pressed(vk_space)) {
+//If the user presses space and canFire tag is true fire a missle
+if(keyboard_check_pressed(vk_space) && canFire) {
+	canFire = false
 	instance_create_layer(x,y,"instances", objMainMissle)
-	
+	alarm[0] = 1 * room_speed
 }
 
 
