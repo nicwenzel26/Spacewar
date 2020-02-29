@@ -1,6 +1,8 @@
 instance_destroy()
 
-global.player2_score += 500
+instance_destroy(other)
+
+global.player2_score += 750
 
 
 repeat(10) {
