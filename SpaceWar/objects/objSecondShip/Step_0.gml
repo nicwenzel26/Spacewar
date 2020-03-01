@@ -23,6 +23,7 @@ if(roundsInMagazineSecond < 5 && !reloading) {
 if(keyboard_check_pressed(vk_enter) && canFire && roundsInMagazineSecond > 0) {
 	canFire = false
 	roundsInMagazineSecond -= 1
+	audio_play_sound(snd_zap, 1, false)
 	instance_create_layer(x,y,"instances", objSecondMissle)
 	alarm[0] = 1 * room_speed
 }

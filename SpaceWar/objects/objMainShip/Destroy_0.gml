@@ -1,3 +1,5 @@
+audio_play_sound(snd_die, 1, false)
+
 global.player1_lives -= 1
 
 if(global.player1_lives > 0) {
