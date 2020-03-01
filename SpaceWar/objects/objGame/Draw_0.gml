@@ -13,6 +13,8 @@ P2 UP: MOVE
 LEFT/RIGHT: TURN
 ENTER: SHOOT
  
+SCORE 1500 POINTS TO WIN
+  
 >> PRESS SHIFT TO START << ")
 		
 		draw_set_halign(fa_left)
